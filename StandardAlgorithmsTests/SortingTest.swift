@@ -44,7 +44,7 @@ class SortingTest: XCTestCase {
     func testMergeSortWithVariousIntegerArraysReturnEachOneSorted() {
         //arrange
         let sorting = Sorting()
-        let testData = [(data: [8, 2, 5, 4, 9], expected: [2, 4, 5, 8, 9]), (data: [2, 76, 23, 4, 105], expected: [2, 4, 23, 76, 105])]
+        let testData = [(data: [8, 2, 5, 4, 9], expected: [2, 4, 5, 8, 9]), (data: [2, 76, 23, 4, 105], expected: [2, 4, 23, 76, 105]), (data: [], expected: [])]
         //act
         //assert
         for test in testData{
@@ -52,5 +52,7 @@ class SortingTest: XCTestCase {
             XCTAssertEqual(result, test.expected)
         }
     }
+    
+    
 
 }

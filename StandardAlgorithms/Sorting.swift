@@ -35,9 +35,29 @@ class Sorting {
             return data
         }
         let midpoint = data.count/2
-        let left = data[..<midpoint]
-        let right = data[midpoint...]
-        return mergeSort(data: left) + mergeSort(data: right)
+        var left = mergeSort(data: Array(data[..<midpoint]))
+        var right = mergeSort(data: Array(data[midpoint...]))
+        print(left)
+        print(right)
+        var new = [Int]()
+        while left.count > 0 && right.count > 0{
+            print(new)
+            if left[0] < right[0] {
+                new.append(left[0])
+                left.remove(at: 0)
+            }else{
+                new.append(right[0])
+                right.remove(at: 0)
+            }
+        }
+        if left.count <= 0{
+            new.append(contentsOf: right)
+        }else{
+            new.append(contentsOf: left)
+        }
+        print(new)
+        return new
         
     }
+    
 }
