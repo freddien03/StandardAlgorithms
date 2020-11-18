@@ -11,7 +11,7 @@ class SearchingTest: XCTestCase {
 
     func testLinearSearchWithUnsortedListsReturnsTheCorrectResult() {
         //arrange
-        let sorting = Sorting()
+        let search = Search()
         let testData = [(data: [3, 7, 5, 9, 1], searchFor: 9, expected: true), (data: [2, 65, 34, 76, 132], searchFor: 41, expected: false), (data: [], searchFor: 5, expected: false)]
         //act
         //assert
